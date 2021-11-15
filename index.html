@@ -35,7 +35,6 @@
             #community::before,
             #rpg::before,
             #reforges::before,
-            #ranks::before,
             #slimefun::before,
             #fishing::before{
                 content: '';
@@ -76,12 +75,6 @@
                     url('section-6.png');
                 background-blend-mode: multiply;
             }
-            #ranks::before{
-                background-image:
-                    linear-gradient(to bottom, #00a8a800, #00a8a8),
-                    url('section-7.png');
-                background-blend-mode: multiply;
-            }
             #slimefun::before{
                 background-image:
                     linear-gradient(to bottom, #00a8a800, #00a8a8),
@@ -93,6 +86,7 @@
                     linear-gradient(to bottom, #00a8a800, #00a8a8),
                     url('section-9.png');
                 background-blend-mode: multiply;
+                background-position-y: 30%;
             }
             h1{
                 text-transform: uppercase;
@@ -204,12 +198,11 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#dungeon">Dungeon</a></li>
                 <li><a href="#talisman">Talisman</a></li>
-                <li><a href="#community">Community</a></li>
                 <li><a href="#rpg">RPG</a></li>
                 <li><a href="#reforges">Reforges</a></li>
-                <li><a href="#ranks">Ranks</a></li>
                 <li><a href="#slimefun">Slimefun</a></li>
                 <li><a href="#fishing">Fishing</a></li>
+                <li><a href="#community">Community</a></li>
             </ul>
         </section>
 
@@ -245,23 +238,9 @@
             </div>
         </section>
 
-        <section class="secontent text-center" id="community">
-            <div class="row align-items-center justify-content-center" style="width: 100%; margin-bottom: 4em;">
-                <div class="col-7">
-                    <h1 style="margin-bottom: 0.7em;">slot terbatas<br><span class="fst-italic bottom-bold">tunggu apalagi?</span></h1>
-                    <span id="copied">&nbsp;</span>
-                    <button onclick="copyip()" class="lengkap" title="copy ip">ip: octagon-id.xyz</button>
-                    <span class="version">Java Edition 1.17.1</span>
-                    <a href="http://discord.octagon-id.xyz/" target="_blank" title="join discord">
-                        <img src="dc-logo.png" alt="" class="img-white position-absolute bottom-0 start-50 translate-middle-x">
-                    </a>
-                </div>
-            </div>
-        </section>
-
         <section class="secontent" id="rpg">
-            <div class="row align-items-start justify-content-start" style="margin-top: 4em;">
-                <div class="col-12">
+            <div class="row align-items-end justify-content-end" style="width: 100%; margin-bottom: 4em;">
+                <div class="col-5">
                     <h1 class="mb-4">Ragam senjata<br><span class="fst-italic bottom-bold">RPG</span>.</h1>
                     <span class="lengkap">lihat selengkapnya</span>
                 </div>
@@ -269,18 +248,9 @@
         </section>
 
         <section class="secontent" id="reforges">
-            <div class="row align-items-start justify-content-start" style="margin-top: 4em;">
-                <div class="col-12">
+            <div class="row align-items-end justify-content-end" style="width: 100%; margin-bottom: 4em;">
+                <div class="col-6">
                     <h1 class="mb-4">Perkuat Peralatan<br><span class="fst-italic bottom-bold">Forge</span>.</h1>
-                    <span class="lengkap">lihat selengkapnya</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="secontent text-center" id="ranks">
-            <div class="row justify-content-center" style="width: 100%;">
-                <div class="col-7">
-                    <h1>Ranks<br><span class="fst-italic bottom-bold">more features</span></h1>
                     <span class="lengkap">lihat selengkapnya</span>
                 </div>
             </div>
@@ -306,6 +276,20 @@
 
         <section class="text-white" id="more">
             <h1 class="position-absolute translate-middle start-50 top-50"><span class="fst-italic bottom-bold shadow">and much more</span>.</h1>
+        </section>
+
+        <section class="secontent text-center" id="community">
+            <div class="row align-items-center justify-content-center" style="width: 100%; margin-bottom: 4em;">
+                <div class="col-7">
+                    <h1 style="margin-bottom: 0.7em;">slot terbatas<br><span class="fst-italic bottom-bold">tunggu apa lagi?</span></h1>
+                    <span id="copied">&nbsp;</span>
+                    <button onclick="copyip()" class="lengkap" title="copy ip">ip: octagon-id.xyz</button>
+                    <span class="version">Java Edition 1.17.1</span>
+                    <a href="http://discord.octagon-id.xyz/" target="_blank" title="join discord">
+                        <img src="dc-logo.png" alt="" class="img-white position-absolute bottom-0 start-50 translate-middle-x">
+                    </a>
+                </div>
+            </div>
         </section>
 
         <footer style="background-color: rgba(0, 0, 0, 0.986); color: #ffffff">

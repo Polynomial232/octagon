@@ -73,9 +73,9 @@
             #rpg::before{
                 background-image:
                     linear-gradient(to bottom, #00a8a800, #00a8a8),
-                    url('./image/rpg.png');
+                    url('./image/rpg-2.png');
                 background-blend-mode: multiply;
-                background-position: left;
+                background-position: center;
             }
             #reforges::before{
                 background-image:
@@ -86,7 +86,7 @@
             #slimefun::before{
                 background-image:
                     linear-gradient(to bottom, #00a8a800, #00a8a8),
-                    url('./image/slimefun-2.png');
+                    url('./image/slimefun.png');
                 background-blend-mode: multiply;
                 background-position-y: 50%;
             }
@@ -274,7 +274,7 @@
         </style>
     </head>
     <body>
-        <section class="nav position-fixed top-50 start-0 translate-middle-y d-none d-lg-block">
+        <section class="nav position-fixed top-50 start-0 translate-middle-y d-none">
             <ul>
                 <li class="c active"><a href="#home">Home</a></li>
                 <li><a href="#dungeon">Dungeon</a></li>
@@ -332,7 +332,7 @@
         <section class="secontent" id="rpg">
             <div class="row flex-row w-100">
                 <div class="col-lg-5">
-                    <h1 class="mb-4">Ragam senjata<br><span class="fst-italic bottom-bold">RPG</span>.</h1>
+                    <h1 class="mb-4">unique equipment<br><span class="fst-italic bottom-bold">RPG</span>.</h1>
                     <span class="lengkap">lihat selengkapnya</span>
                 </div>
             </div>
@@ -341,7 +341,7 @@
         <section class="secontent" id="reforges">
             <div class="row flex-row w-100">
                 <div class="col-lg-6">
-                    <h1 class="mb-4">Perkuat Peralatan<br><span class="fst-italic bottom-bold">Forge</span>.</h1>
+                    <h1 class="mb-4">Peralatan<br><span class="fst-italic bottom-bold">Forge</span>.</h1>
                     <span class="lengkap">lihat selengkapnya</span>
                 </div>
             </div>
@@ -381,7 +381,7 @@
 
         <footer style="background-color: rgba(0, 0, 0, 0.986); color: #ffffff">
             <div class="container p-2 text-center text-uppercase">
-                Copyright &copy; 2020 octagon-id
+                Copyright &copy; 2021 octagon-id
             </div>
         </footer>
 
@@ -416,9 +416,9 @@
             });
             cur = cur[cur.length-1];
             if(cur[0].id == "home" || cur[0].id == "community"){
-                console.log(document.getElementsByClassName("nav")[0].classList.remove("d-lg-block"));
+                document.getElementsByClassName("nav")[0].classList.remove("d-lg-block");
             }else{
-                console.log(document.getElementsByClassName("nav")[0].classList.add("d-lg-block"));
+                document.getElementsByClassName("nav")[0].classList.add("d-lg-block");
             }
             var id = cur && cur.length ? cur[0].id : "";
             menuItems

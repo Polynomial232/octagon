@@ -402,7 +402,6 @@
                 var ipserver = "play.octagon-id.xyz";
                 navigator.clipboard.writeText(ipserver);
                 document.getElementById("copied").innerHTML = "Ip has been copied!";
-                timer = setInterval(hidecopied, 2000);
             }
             function hidecopied(){
                 document.getElementById("copied").style.visibility= "hidden";

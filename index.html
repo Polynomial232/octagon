@@ -380,7 +380,7 @@
                 <div class="col-12">
                     <h1 style="margin-bottom: 0.7em;">slot terbatas<br><span class="fst-italic bottom-bold">tunggu apa lagi?</span></h1>
                     <span id="copied">&nbsp;</span>
-                    <button onclick="copyip()" class="lengkap" title="copy ip">ip: play.octagon-id.xyz</button>
+                    <button onclick="copyToClipboard('#ip')" class="lengkap" title="copy ip">ip: <span id="ip">play.octagon-id.xyz</span></button>
                     <span class="version">Java Edition 1.17.1</span>
                     <a href="http://discord.octagon-id.xyz/" target="_blank" title="join discord">
                         <img src="./image/dc-logo.png" alt="" class="img-white position-absolute bottom-0 start-50 translate-middle-x">
@@ -395,17 +395,19 @@
             </div>
         </footer>
 
+        <input type="text" id="copy" value="play.octagon-id.xyz">
         <script>
-            //Copy IP
-            function copyip() {
+            function copyToClipboard(element) {
+                var $temp = $("<input>");
+                $("body").append($temp);
+                $temp.val($(element).text()).select();
+                document.execCommand("copy");
+                $temp.remove();
                 document.getElementById("copied").style.visibility= "visible";
-                var ipserver = "play.octagon-id.xyz";
-                navigator.clipboard.writeText(ipserver);
                 document.getElementById("copied").innerHTML = "Ip has been copied!";
-            }
-            function hidecopied(){
-                document.getElementById("copied").style.visibility= "hidden";
-                clearInterval(timer);
+                timer = setInterval(() => {
+                    document.getElementById("copied").style.visibility= "hidden";    
+                }, 2000);
             }
             
             //Scroll Active
@@ -443,7 +445,7 @@
                     return false;
                 }
                 if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
-                    return false;
+                    //return false;
                 }
             }
 

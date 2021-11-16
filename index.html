@@ -144,7 +144,11 @@
                 letter-spacing: 1px;
                 border: none;
             }
-            #community .lengkap:hover{
+            a{
+                text-decoration: none;
+            }
+            #community .lengkap:hover,
+            a>.lengkap:hover{
                 background:#f5c367;
                 color: black;
                 transition: .3s ease-in-out;
@@ -321,7 +325,7 @@
             <div class="row flex-row w-100">
                 <div class="col-lg-6">
                     <h1 class="mb-4">Aksi tak terbatas<br><span class="fst-italic bottom-bold">Dungeon</span>.</h1>
-                    <span class="lengkap">lihat selengkapnya</span>
+                    <a href=""><span class="lengkap">lihat selengkapnya</span></a>
                 </div>
             </div>
         </section>
@@ -432,10 +436,17 @@
             });
 
             document.addEventListener('contextmenu', event => event.preventDefault());
-
             $("img").mousedown(function(){
                 return false;
             });
+            document.onkeydown=function(e){
+                if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+                    return false;
+                }
+                if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+                    return false;
+                }
+            }
 
             function delhash(){
                 timehash = setInterval(remhash, 1);

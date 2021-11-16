@@ -11,6 +11,11 @@
         <style>
             *{
                 font-family: 'Jost', sans-serif;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+                -ms-user-select:none;
+                user-select:none;
+                -o-user-select:none;
             }
             html{
                 overflow-y: scroll;
@@ -332,7 +337,7 @@
         <section class="secontent" id="rpg">
             <div class="row flex-row w-100">
                 <div class="col-lg-5">
-                    <h1 class="mb-4">unique equipment<br><span class="fst-italic bottom-bold">RPG</span>.</h1>
+                    <h1 class="mb-4">unique<br><span class="fst-italic bottom-bold">RPG</span>.</h1>
                     <span class="lengkap">lihat selengkapnya</span>
                 </div>
             </div>
@@ -424,6 +429,12 @@
             menuItems
                 .parent().removeClass("active")
                 .end().filter("[href='#"+id+"']").parent().addClass("active");
+            });
+
+            document.addEventListener('contextmenu', event => event.preventDefault());
+
+            $("img").mousedown(function(){
+                return false;
             });
         </script>
         <!-- script src="./js/script.js"></script-->

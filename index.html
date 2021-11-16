@@ -1,15 +1,20 @@
 <html>
     <head>
         <title>Octagon Skyblock</title>
+        <link rel="icon" href="./image/logo.ico">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;400;500;900&family=Montserrat+Alternates:wght@100&display=swap" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <style>
             *{
                 font-family: 'Jost', sans-serif;
+            }
+            html{
+                overflow-y: scroll;
+                scroll-snap-type: y mandatory;
             }
             .secontent{
                 position: relative;
@@ -17,6 +22,7 @@
                 height: 100vh;
                 color: white;
                 padding: 20px;
+                scroll-snap-align: center;
             }
             #home::before{
                 content: '';
@@ -26,7 +32,7 @@
                 bottom: 0px;
                 left: 0px;
                 background-image:
-                    url('section-1.png');
+                    url('./image/home.png');
                 background-size: cover;
                 z-index: -1;
             }
@@ -44,47 +50,50 @@
                 bottom: 0px;
                 left: 0px;
                 background-size: cover;
+                background-position: center;
                 z-index: -1;
             }
             #dungeon::before{
                 background-image:
                     linear-gradient(to bottom, #00a8a800, #00a8a8),
-                    url('section-2.png');
+                    url('./image/dungeon.png');
                 background-blend-mode: multiply;
             }
             #talisman::before{
                 background-image:
                     linear-gradient(to bottom, #00a8a800, #00a8a8),
-                    url('section-3.png');
+                    url('./image/talisman.png');
                 background-blend-mode: multiply;
             }
             #community::before{
                 background-image:
-                    url('section-4.png');
+                    url('./image/community.png');
                 z-index: -1;
             }
             #rpg::before{
                 background-image:
                     linear-gradient(to bottom, #00a8a800, #00a8a8),
-                    url('section-5.png');
+                    url('./image/rpg.png');
                 background-blend-mode: multiply;
+                background-position: left;
             }
             #reforges::before{
                 background-image:
                     linear-gradient(to bottom, #00a8a800, #00a8a8),
-                    url('section-6.png');
+                    url('./image/reforges.png');
                 background-blend-mode: multiply;
             }
             #slimefun::before{
                 background-image:
                     linear-gradient(to bottom, #00a8a800, #00a8a8),
-                    url('section-8.png');
+                    url('./image/slimefun-2.png');
                 background-blend-mode: multiply;
+                background-position-y: 50%;
             }
             #fishing::before{
                 background-image:
                     linear-gradient(to bottom, #00a8a800, #00a8a8),
-                    url('section-9.png');
+                    url('./image/fishing.png');
                 background-blend-mode: multiply;
                 background-position-y: 30%;
             }
@@ -167,6 +176,13 @@
                 text-decoration: none;
                 font-size: 16px;
             }
+            .nav .active a{
+                visibility: hidden;
+            }
+            .nav .active{
+                color: #f6aa1c;
+                list-style-type: disc;
+            }
             .nav a:hover{
                 padding-left: 10px;
                 transition: .2s ease-in-out;
@@ -175,27 +191,91 @@
                 margin-left: 1em;
             }
             .nav ul li{
+                list-style-type: circle;
                 color: #fff;
                 padding: 4px 0;
             }
             .secontent .justify-content-start{
                 margin-left: 6em;
             }
-            #more{
-                position: relative;
-                height: 50vh;
-                background:
-                    url("more\ \(3\).png") center bottom no-repeat,
-                    url("more\ \(2\).png") left no-repeat,
-                    url("more\ \(1\).png") right  no-repeat;
-                background-size: contain;
+
+            ::-webkit-scrollbar {
+                display: none;
+                width: 14px;
+            }
+            ::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 5px grey; 
+            }
+            ::-webkit-scrollbar-thumb {
+                background: #f6aa1c; 
+            }
+            ::-webkit-scrollbar-thumb:hover {
+                background: #a78546; 
+            }
+
+            #home ul li{
+                display: inline;
+            }
+            #home ul li a{
+                background-color: #f6aa1c;
+                padding: 1px 3px;
+                font-size: 1.2em;
+                margin: 0 8px;
+                color: white;
+                text-decoration: none;
+            }
+            
+            .secontent .flex-row{
+                display: flex;
+                align-items: end;
+                justify-content: end;
+            }
+            @media only screen and (max-width: 990px) {
+                #home{
+                    text-align: center;
+                }
+                #home h1{
+                    font-size: 5em;
+                }
+                #home .slogan{
+                    font-size: 2em;
+                }
+                .secontent h1{
+                    font-size: 5em;
+                }
+                .secontent .lengkap{
+                    font-size: 3em;
+                }
+                #community .lengkap{
+                    font-size: 4em;
+                }
+                #community .version,
+                #community #copied{
+                    font-size: 2em;
+                }
+                #community .img-white{
+                    width: 40%;
+                } 
+                .secontent .flex-row{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                }
+                #talisman::before,
+                #reforges::before{
+                    background-position: right;
+                }
+            }
+            .secontent .row{
+                margin-bottom: 4em;
             }
         </style>
     </head>
     <body>
-        <section class="nav position-fixed top-50 start-0 translate-middle-y">
+        <section class="nav position-fixed top-50 start-0 translate-middle-y d-none d-lg-block">
             <ul>
-                <li><a href="#home">Home</a></li>
+                <li class="c active"><a href="#home">Home</a></li>
                 <li><a href="#dungeon">Dungeon</a></li>
                 <li><a href="#talisman">Talisman</a></li>
                 <li><a href="#rpg">RPG</a></li>
@@ -206,14 +286,24 @@
             </ul>
         </section>
 
+        
         <section class="secontent" id="home">
-           <div class="position-absolute top-50 start-50 translate-middle" style="width: 60%;">
+            <!-- div class="container-fluid">
+                <div class="float-end">
+                    <ul>
+                        <li><a href="#">Vote</a></li>
+                        <li><a href="#">Forum</a></li>
+                        <li><a href="#">Update</a></li>
+                    </ul>
+                </div>
+            </div -->
+            <div class="position-absolute top-50 start-50 translate-middle" style="width: 60%;">
                 <div class="row justify-content-center">
-                    <div class="col-sm-3">
-                        <img src="logo.png" class="img-fluid" alt="">
+                    <div class="col-lg-3">
+                        <img src="./image/logo.png" class="img-fluid" alt="">
                     </div>
-                    <div class="col-sm-6 align-self-center">
-                        <h1>octagon<br>Skyblock</h1>
+                    <div class="col-lg-6 align-self-center">
+                        <h1 class="">octagon<br>Skyblock</h1>
                         <span class="slogan">Progressive, proactive, professional.</span>
                     </div>
                 </div>
@@ -221,17 +311,17 @@
         </section>
 
         <section class="secontent" id="dungeon">
-            <div class="row align-items-end justify-content-end" style="width: 100%; margin-bottom: 4em;">
-                <div class="col-5">
-                    <h1 class="mb-4">Kuasai<br><span class="fst-italic bottom-bold">Dungeon</span>.</h1>
+            <div class="row flex-row w-100">
+                <div class="col-lg-6">
+                    <h1 class="mb-4">Aksi tak terbatas<br><span class="fst-italic bottom-bold">Dungeon</span>.</h1>
                     <span class="lengkap">lihat selengkapnya</span>
                 </div>
             </div>
         </section>
 
         <section class="secontent" id="talisman">
-            <div class="row align-items-end justify-content-end" style="width: 100%; margin-bottom: 4em;">
-                <div class="col-5">
+            <div class="row flex-row w-100">
+                <div class="col-lg-5">
                     <h1 class="mb-4">Perkuat diri<br><span class="fst-italic bottom-bold">Talisman</span>.</h1>
                     <span class="lengkap">lihat selengkapnya</span>
                 </div>
@@ -239,8 +329,8 @@
         </section>
 
         <section class="secontent" id="rpg">
-            <div class="row align-items-end justify-content-end" style="width: 100%; margin-bottom: 4em;">
-                <div class="col-5">
+            <div class="row flex-row w-100">
+                <div class="col-lg-5">
                     <h1 class="mb-4">Ragam senjata<br><span class="fst-italic bottom-bold">RPG</span>.</h1>
                     <span class="lengkap">lihat selengkapnya</span>
                 </div>
@@ -248,8 +338,8 @@
         </section>
 
         <section class="secontent" id="reforges">
-            <div class="row align-items-end justify-content-end" style="width: 100%; margin-bottom: 4em;">
-                <div class="col-6">
+            <div class="row flex-row w-100">
+                <div class="col-lg-6">
                     <h1 class="mb-4">Perkuat Peralatan<br><span class="fst-italic bottom-bold">Forge</span>.</h1>
                     <span class="lengkap">lihat selengkapnya</span>
                 </div>
@@ -257,8 +347,8 @@
         </section>
 
         <section class="secontent" id="slimefun">
-            <div class="row align-items-end justify-content-end" style="width: 100%; margin-bottom: 4em;">
-                <div class="col-4">
+            <div class="row flex-row w-100">
+                <div class="col-lg-5">
                     <h1 class="mb-4">Machine<br><span class="fst-italic bottom-bold">Slimefun</span>.</h1>
                     <span class="lengkap">lihat selengkapnya</span>
                 </div>
@@ -266,27 +356,23 @@
         </section>
 
         <section class="secontent" id="fishing">
-            <div class="row align-items-end justify-content-end" style="width: 100%; margin-bottom: 4em;">
-                <div class="col-4">
+            <div class="row flex-row w-100">
+                <div class="col-lg-5">
                     <h1 class="mb-4">relaxed<br><span class="fst-italic bottom-bold">More Fish</span>.</h1>
                     <span class="lengkap">lihat selengkapnya</span>
                 </div>
             </div>
         </section>
 
-        <section class="text-white" id="more">
-            <h1 class="position-absolute translate-middle start-50 top-50"><span class="fst-italic bottom-bold shadow">and much more</span>.</h1>
-        </section>
-
         <section class="secontent text-center" id="community">
-            <div class="row align-items-center justify-content-center" style="width: 100%; margin-bottom: 4em;">
-                <div class="col-7">
+            <div class="row align-items-center justify-content-center w-100">
+                <div class="col-12">
                     <h1 style="margin-bottom: 0.7em;">slot terbatas<br><span class="fst-italic bottom-bold">tunggu apa lagi?</span></h1>
                     <span id="copied">&nbsp;</span>
                     <button onclick="copyip()" class="lengkap" title="copy ip">ip: octagon-id.xyz</button>
                     <span class="version">Java Edition 1.17.1</span>
                     <a href="http://discord.octagon-id.xyz/" target="_blank" title="join discord">
-                        <img src="dc-logo.png" alt="" class="img-white position-absolute bottom-0 start-50 translate-middle-x">
+                        <img src="./image/dc-logo.png" alt="" class="img-white position-absolute bottom-0 start-50 translate-middle-x">
                     </a>
                 </div>
             </div>
@@ -299,13 +385,42 @@
         </footer>
 
         <script>
+            let timer;
+            //Copy IP
             function copyip() {
-              var ipserver = "octagon-id.xyz";
-              navigator.clipboard.writeText(ipserver);
-              document.getElementById("copied").innerHTML = "Ip has been copied!";
+                document.getElementById("copied").style.visibility= "visible";
+                var ipserver = "octagon-id.xyz";
+                navigator.clipboard.writeText(ipserver);
+                document.getElementById("copied").innerHTML = "Ip has been copied!";
+                timer = setInterval(hidecopied, 2000);
             }
+            function hidecopied(){
+                document.getElementById("copied").style.visibility= "hidden";
+                clearInterval(timer);
+            }
+            
+            //Scroll Active
+            var topMenu = $(".nav"),
+            topMenuHeight = topMenu.outerHeight()+15,
+            menuItems = topMenu.find("a"),
+            scrollItems = menuItems.map(function(){
+                var item = $($(this).attr("href"));
+                if (item.length) { return item; }
+            });
+
+            $(window).scroll(function(){
+            var fromTop = $(this).scrollTop()+topMenuHeight;
+            var cur = scrollItems.map(function(){
+                if ($(this).offset().top < fromTop)
+                return this;
+            });
+            cur = cur[cur.length-1];
+            var id = cur && cur.length ? cur[0].id : "";
+            menuItems
+                .parent().removeClass("active")
+                .end().filter("[href='#"+id+"']").parent().addClass("active");
+            });
         </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="script.js"></script>
+        <script src="./js/script.js"></script>
     </body>
 </html>

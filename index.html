@@ -169,6 +169,7 @@
                 text-transform: uppercase;
             }
             .nav{
+                display: block;
                 z-index: 100;
             }
             .nav a{
@@ -407,7 +408,6 @@
                 var item = $($(this).attr("href"));
                 if (item.length) { return item; }
             });
-
             $(window).scroll(function(){
             var fromTop = $(this).scrollTop()+topMenuHeight;
             var cur = scrollItems.map(function(){
@@ -415,12 +415,17 @@
                 return this;
             });
             cur = cur[cur.length-1];
+            if(cur[0].id == "home" || cur[0].id == "community"){
+                console.log(document.getElementsByClassName("nav")[0].classList.remove("d-lg-block"));
+            }else{
+                console.log(document.getElementsByClassName("nav")[0].classList.add("d-lg-block"));
+            }
             var id = cur && cur.length ? cur[0].id : "";
             menuItems
                 .parent().removeClass("active")
                 .end().filter("[href='#"+id+"']").parent().addClass("active");
             });
         </script>
-        <script src="./js/script.js"></script>
+        <!-- script src="./js/script.js"></script-->
     </body>
 </html>

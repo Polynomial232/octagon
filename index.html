@@ -40,6 +40,7 @@
                     url('./image/home.png');
                 background-size: cover;
                 z-index: -1;
+                background-position: center;
             }
             #dungeon::before,
             #talisman::before,
@@ -281,14 +282,14 @@
     <body>
         <section class="nav position-fixed top-50 start-0 translate-middle-y d-none">
             <ul>
-                <li class="c active"><a href="#home">Home</a></li>
-                <li><a href="#dungeon">Dungeon</a></li>
-                <li><a href="#talisman">Talisman</a></li>
-                <li><a href="#rpg">RPG</a></li>
-                <li><a href="#reforges">Reforges</a></li>
-                <li><a href="#slimefun">Slimefun</a></li>
-                <li><a href="#fishing">Fishing</a></li>
-                <li><a href="#community">Community</a></li>
+                <li class="c active"><a href="#home" onclick="delhash()">Home</a></li>
+                <li><a href="#dungeon" onclick="delhash()">Dungeon</a></li>
+                <li><a href="#talisman" onclick="delhash()">Talisman</a></li>
+                <li><a href="#rpg" onclick="delhash()">RPG</a></li>
+                <li><a href="#reforges" onclick="delhash()">Reforges</a></li>
+                <li><a href="#slimefun" onclick="delhash()">Slimefun</a></li>
+                <li><a href="#fishing" onclick="delhash()">Fishing</a></li>
+                <li><a href="#community" onclick="delhash()">Community</a></li>
             </ul>
         </section>
 
@@ -391,14 +392,13 @@
         </footer>
 
         <script>
-            let timer;
             //Copy IP
             function copyip() {
                 document.getElementById("copied").style.visibility= "visible";
                 var ipserver = "octagon-id.xyz";
                 navigator.clipboard.writeText(ipserver);
                 document.getElementById("copied").innerHTML = "Ip has been copied!";
-                timer = setInterval(hidecopied, 3000);
+                timer = setInterval(hidecopied, 2000);
             }
             function hidecopied(){
                 document.getElementById("copied").style.visibility= "hidden";
@@ -436,7 +436,17 @@
             $("img").mousedown(function(){
                 return false;
             });
+
+            function delhash(){
+                timehash = setInterval(remhash, 1);
+            }
+            function remhash(){
+                history.replaceState(null, null, ' ');
+                clearInterval(timehash);
+            }
+            history.replaceState(null, null, ' ');
         </script>
+
         <!-- script src="./js/script.js"></script-->
     </body>
 </html>

@@ -3,285 +3,12 @@
         <title>Octagon Skyblock</title>
         <link rel="icon" href="./image/logo.ico">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/style.css">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;400;500;900&family=Montserrat+Alternates:wght@100&display=swap" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <style>
-            *{
-                font-family: 'Jost', sans-serif;
-                -moz-user-select: none;
-                -webkit-user-select: none;
-                -ms-user-select:none;
-                user-select:none;
-                -o-user-select:none;
-            }
-            html{
-                overflow-y: scroll;
-                scroll-snap-type: y mandatory;
-            }
-            .secontent{
-                position: relative;
-                display: flex;
-                height: 100vh;
-                color: white;
-                padding: 20px;
-                scroll-snap-align: center;
-            }
-            #home::before{
-                content: '';
-                position: absolute;
-                top: -6em;
-                right: 0px;
-                bottom: 0px;
-                left: 0px;
-                background-image:
-                    url('./image/home.png');
-                background-size: cover;
-                z-index: -1;
-                background-position: center;
-            }
-            #dungeon::before,
-            #talisman::before,
-            #community::before,
-            #rpg::before,
-            #reforges::before,
-            #slimefun::before,
-            #fishing::before{
-                content: '';
-                position: absolute;
-                top: 0px;
-                right: 0px;
-                bottom: 0px;
-                left: 0px;
-                background-size: cover;
-                background-position: center;
-                z-index: -1;
-            }
-            #dungeon::before{
-                background-image:
-                    linear-gradient(to bottom, #00a8a800, #00a8a8),
-                    url('./image/dungeon.png');
-                background-blend-mode: multiply;
-            }
-            #talisman::before{
-                background-image:
-                    linear-gradient(to bottom, #00a8a800, #00a8a8),
-                    url('./image/talisman.png');
-                background-blend-mode: multiply;
-            }
-            #community::before{
-                background-image:
-                    url('./image/community.png');
-                z-index: -1;
-            }
-            #rpg::before{
-                background-image:
-                    linear-gradient(to bottom, #00a8a800, #00a8a8),
-                    url('./image/rpg-2.png');
-                background-blend-mode: multiply;
-                background-position: center;
-            }
-            #reforges::before{
-                background-image:
-                    linear-gradient(to bottom, #00a8a800, #00a8a8),
-                    url('./image/reforges.png');
-                background-blend-mode: multiply;
-            }
-            #slimefun::before{
-                background-image:
-                    linear-gradient(to bottom, #00a8a800, #00a8a8),
-                    url('./image/slimefun.png');
-                background-blend-mode: multiply;
-                background-position-y: 50%;
-            }
-            #fishing::before{
-                background-image:
-                    linear-gradient(to bottom, #00a8a800, #00a8a8),
-                    url('./image/fishing.png');
-                background-blend-mode: multiply;
-                background-position-y: 30%;
-            }
-            h1{
-                text-transform: uppercase;
-                font-weight: bold;
-            }
-            #home h1{
-                font-weight: 900;
-                letter-spacing: 4px;
-                font-size: 40;
-            }
-            .secontent h1{
-                font-weight: 500;
-                letter-spacing: 2px;
-                font-size: 60;
-            }
-            .slogan{
-                text-transform: uppercase;
-                background:#f6aa1c;
-                color: black;
-                font-size: 18;
-                padding: 0px 2px;
-                font-weight: 500;
-            }
-            .lengkap{
-                text-transform: uppercase;
-                background:#f6aa1c;
-                color: black;
-                font-size: 28;
-                padding: 0px 2px;
-                font-weight: 500;
-                letter-spacing: 1px;
-            }
-            #community .lengkap{
-                text-transform: uppercase;
-                background:#f6aa1c;
-                color: black;
-                font-size: 26;
-                padding: 0px 1em;
-                font-weight: 500;
-                letter-spacing: 1px;
-                border: none;
-            }
-            a{
-                text-decoration: none;
-            }
-            #community .lengkap:hover,
-            a>.lengkap:hover{
-                background:#f5c367;
-                color: black;
-                transition: .3s ease-in-out;
-            }
-            .bottom-bold{
-                font-weight: 900
-            }
-            #community .img-white{
-                filter: brightness(0) invert(1);
-                width: 13%;
-                margin-bottom: 2em;
-            }
-            #community .img-white:hover{
-                filter: brightness(1) invert(0);
-                transition: .2s ease-in-out;
-            }
-            .version{
-                font-weight: 400;
-                margin-top: 10px;
-                display: block;
-                text-transform: uppercase;
-                font-style: italic;
-            }
-
-            #copied{
-                display: block;
-                margin-bottom: 10px;
-                text-transform: uppercase;
-            }
-            .nav{
-                display: block;
-                z-index: 100;
-            }
-            .nav a{
-                color: #fff;
-                text-decoration: none;
-                font-size: 16px;
-            }
-            .nav .active a{
-                visibility: hidden;
-            }
-            .nav .active{
-                color: #f6aa1c;
-                list-style-type: disc;
-            }
-            .nav a:hover{
-                padding-left: 10px;
-                transition: .2s ease-in-out;
-            }
-            .nav{
-                margin-left: 1em;
-            }
-            .nav ul li{
-                list-style-type: circle;
-                color: #fff;
-                padding: 4px 0;
-            }
-            .secontent .justify-content-start{
-                margin-left: 6em;
-            }
-
-            ::-webkit-scrollbar {
-                display: none;
-                width: 14px;
-            }
-            ::-webkit-scrollbar-track {
-                box-shadow: inset 0 0 5px grey; 
-            }
-            ::-webkit-scrollbar-thumb {
-                background: #f6aa1c; 
-            }
-            ::-webkit-scrollbar-thumb:hover {
-                background: #a78546; 
-            }
-
-            #home ul li{
-                display: inline;
-            }
-            #home ul li a{
-                background-color: #f6aa1c;
-                padding: 1px 3px;
-                font-size: 1.2em;
-                margin: 0 8px;
-                color: white;
-                text-decoration: none;
-            }
-            
-            .secontent .flex-row{
-                display: flex;
-                align-items: end;
-                justify-content: end;
-            }
-            @media only screen and (max-width: 990px) {
-                #home{
-                    text-align: center;
-                }
-                #home h1{
-                    font-size: 5em;
-                }
-                #home .slogan{
-                    font-size: 2em;
-                }
-                .secontent h1{
-                    font-size: 5em;
-                }
-                .secontent .lengkap{
-                    font-size: 3em;
-                }
-                #community .lengkap{
-                    font-size: 4em;
-                }
-                #community .version,
-                #community #copied{
-                    font-size: 2em;
-                }
-                #community .img-white{
-                    width: 40%;
-                } 
-                .secontent .flex-row{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    text-align: center;
-                }
-                #talisman::before,
-                #reforges::before{
-                    background-position: right;
-                }
-            }
-            .secontent .row{
-                margin-bottom: 4em;
-            }
-        </style>
     </head>
     <body>
         <section class="nav position-fixed top-50 start-0 translate-middle-y d-none">
@@ -299,15 +26,6 @@
 
         
         <section class="secontent" id="home">
-            <!-- div class="container-fluid">
-                <div class="float-end">
-                    <ul>
-                        <li><a href="#">Vote</a></li>
-                        <li><a href="#">Forum</a></li>
-                        <li><a href="#">Update</a></li>
-                    </ul>
-                </div>
-            </div -->
             <div class="position-absolute top-50 start-50 translate-middle" style="width: 60%;">
                 <div class="row justify-content-center">
                     <div class="col-lg-3">
@@ -325,7 +43,7 @@
             <div class="row flex-row w-100">
                 <div class="col-lg-6">
                     <h1 class="mb-4">Aksi tak terbatas<br><span class="fst-italic bottom-bold">Dungeon</span>.</h1>
-                    <a href=""><span class="lengkap">lihat selengkapnya</span></a>
+                    <!--a href=""><span class="lengkap">lihat selengkapnya</span></a-->
                 </div>
             </div>
         </section>
@@ -334,7 +52,7 @@
             <div class="row flex-row w-100">
                 <div class="col-lg-5">
                     <h1 class="mb-4">Perkuat diri<br><span class="fst-italic bottom-bold">Talisman</span>.</h1>
-                    <span class="lengkap">lihat selengkapnya</span>
+                    <!--a href=""><span class="lengkap">lihat selengkapnya</span></a-->
                 </div>
             </div>
         </section>
@@ -343,7 +61,7 @@
             <div class="row flex-row w-100">
                 <div class="col-lg-5">
                     <h1 class="mb-4">unique<br><span class="fst-italic bottom-bold">RPG</span>.</h1>
-                    <span class="lengkap">lihat selengkapnya</span>
+                    <!--a href=""><span class="lengkap">lihat selengkapnya</span></a-->
                 </div>
             </div>
         </section>
@@ -352,7 +70,7 @@
             <div class="row flex-row w-100">
                 <div class="col-lg-5">
                     <h1 class="mb-4">Peralatan<br><span class="fst-italic bottom-bold">Forge</span>.</h1>
-                    <span class="lengkap">lihat selengkapnya</span>
+                    <!--a href=""><span class="lengkap">lihat selengkapnya</span></a-->
                 </div>
             </div>
         </section>
@@ -361,7 +79,7 @@
             <div class="row flex-row w-100">
                 <div class="col-lg-5">
                     <h1 class="mb-4">Machine<br><span class="fst-italic bottom-bold">Slimefun</span>.</h1>
-                    <span class="lengkap">lihat selengkapnya</span>
+                    <!--a href=""><span class="lengkap">lihat selengkapnya</span></a-->
                 </div>
             </div>
         </section>
@@ -370,7 +88,7 @@
             <div class="row flex-row w-100">
                 <div class="col-lg-5">
                     <h1 class="mb-4">relaxed<br><span class="fst-italic bottom-bold">More Fish</span>.</h1>
-                    <span class="lengkap">lihat selengkapnya</span>
+                    <!--a href=""><span class="lengkap">lihat selengkapnya</span></a-->
                 </div>
             </div>
         </section>
@@ -389,76 +107,14 @@
             </div>
         </section>
 
-        <footer style="background-color: rgba(0, 0, 0, 0.986); color: #ffffff">
+        <footer class="" style="background-color: rgba(0, 0, 0, 0.986); color: #ffffff;">
             <div class="container p-2 text-center text-uppercase">
-                Copyright &copy; 2021 octagon-id
+                <div class="row justify-content-between">
+                    <div class="col-lg-12">Copyright &copy; 2021 octagon-id</div>
+                </div>
             </div>
         </footer>
 
-        <input type="text" id="copy" value="play.octagon-id.xyz">
-        <script>
-            function copyToClipboard(element) {
-                var $temp = $("<input>");
-                $("body").append($temp);
-                $temp.val($(element).text()).select();
-                document.execCommand("copy");
-                $temp.remove();
-                document.getElementById("copied").style.visibility= "visible";
-                document.getElementById("copied").innerHTML = "Ip has been copied!";
-                timer = setInterval(() => {
-                    document.getElementById("copied").style.visibility= "hidden";    
-                }, 2000);
-            }
-            
-            //Scroll Active
-            var topMenu = $(".nav"),
-            topMenuHeight = topMenu.outerHeight()+15,
-            menuItems = topMenu.find("a"),
-            scrollItems = menuItems.map(function(){
-                var item = $($(this).attr("href"));
-                if (item.length) { return item; }
-            });
-            $(window).scroll(function(){
-            var fromTop = $(this).scrollTop()+topMenuHeight;
-            var cur = scrollItems.map(function(){
-                if ($(this).offset().top < fromTop)
-                return this;
-            });
-            cur = cur[cur.length-1];
-            if(cur[0].id == "home" || cur[0].id == "community"){
-                document.getElementsByClassName("nav")[0].classList.remove("d-lg-block");
-            }else{
-                document.getElementsByClassName("nav")[0].classList.add("d-lg-block");
-            }
-            var id = cur && cur.length ? cur[0].id : "";
-            menuItems
-                .parent().removeClass("active")
-                .end().filter("[href='#"+id+"']").parent().addClass("active");
-            });
-
-            document.addEventListener('contextmenu', event => event.preventDefault());
-            $("img").mousedown(function(){
-                return false;
-            });
-            document.onkeydown=function(e){
-                if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
-                    return false;
-                }
-                if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
-                    //return false;
-                }
-            }
-
-            function delhash(){
-                timehash = setInterval(remhash, 1);
-            }
-            function remhash(){
-                history.replaceState(null, null, ' ');
-                clearInterval(timehash);
-            }
-            history.replaceState(null, null, ' ');
-        </script>
-
-        <!-- script src="./js/script.js"></script-->
+        <script src="./js/script.js"></script>
     </body>
 </html>

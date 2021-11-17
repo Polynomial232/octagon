@@ -1,0 +1,275 @@
+*{
+    font-family: 'Jost', sans-serif;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select:none;
+    user-select:none;
+    -o-user-select:none;
+}
+html{
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+.secontent{
+    position: relative;
+    display: flex;
+    height: 100vh;
+    color: white;
+    padding: 20px;
+    scroll-snap-align: center;
+}
+#home::before{
+    content: '';
+    position: absolute;
+    top: -6em;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image:
+        url('../image/home.png');
+    background-size: cover;
+    z-index: -1;
+    background-position: center;
+}
+#dungeon::before,
+#talisman::before,
+#community::before,
+#rpg::before,
+#reforges::before,
+#slimefun::before,
+#fishing::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+#dungeon::before{
+    background-image:
+        linear-gradient(to bottom, #00a8a800, #00a8a8),
+        url('../image/dungeon.png');
+    background-blend-mode: multiply;
+}
+#talisman::before{
+    background-image:
+        linear-gradient(to bottom, #00a8a800, #00a8a8),
+        url('../image/talisman.png');
+    background-blend-mode: multiply;
+}
+#community::before{
+    background-image:
+        url('../image/community.png');
+    z-index: -1;
+}
+#rpg::before{
+    background-image:
+        linear-gradient(to bottom, #00a8a800, #00a8a8),
+        url('../image/rpg-2.png');
+    background-blend-mode: multiply;
+    background-position: center;
+}
+#reforges::before{
+    background-image:
+        linear-gradient(to bottom, #00a8a800, #00a8a8),
+        url('../image/reforges.png');
+    background-blend-mode: multiply;
+}
+#slimefun::before{
+    background-image:
+        linear-gradient(to bottom, #00a8a800, #00a8a8),
+        url('../image/slimefun.png');
+    background-blend-mode: multiply;
+    background-position-y: 50%;
+}
+#fishing::before{
+    background-image:
+        linear-gradient(to bottom, #00a8a800, #00a8a8),
+        url('../image/fishing.png');
+    background-blend-mode: multiply;
+    background-position-y: 30%;
+}
+h1{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#home h1{
+    font-weight: 900;
+    letter-spacing: 4px;
+    font-size: 40;
+}
+.secontent h1{
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 60;
+}
+.slogan{
+    text-transform: uppercase;
+    background:#f6aa1c;
+    color: black;
+    font-size: 18;
+    padding: 0px 2px;
+    font-weight: 500;
+}
+.lengkap{
+    text-transform: uppercase;
+    background:#f6aa1c;
+    color: black;
+    font-size: 28;
+    padding: 0px 2px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+#community .lengkap{
+    text-transform: uppercase;
+    background:#f6aa1c;
+    color: black;
+    font-size: 26;
+    padding: 0px 1em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border: none;
+}
+a{
+    text-decoration: none;
+}
+#community .lengkap:hover,
+a>.lengkap:hover{
+    background:#f5c367;
+    color: black;
+    transition: .3s ease-in-out;
+}
+.bottom-bold{
+    font-weight: 900
+}
+#community .img-white{
+    filter: brightness(0) invert(1);
+    width: 13%;
+    margin-bottom: 2em;
+}
+#community .img-white:hover{
+    filter: brightness(1) invert(0);
+    transition: .2s ease-in-out;
+}
+.version{
+    font-weight: 400;
+    margin-top: 10px;
+    display: block;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+#copied{
+    display: block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.nav{
+    display: block;
+    z-index: 100;
+}
+.nav a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+.nav .active a{
+    visibility: hidden;
+}
+.nav .active{
+    color: #f6aa1c;
+    list-style-type: disc;
+}
+.nav a:hover{
+    padding-left: 10px;
+    transition: .2s ease-in-out;
+}
+.nav{
+    margin-left: 1em;
+}
+.nav ul li{
+    list-style-type: circle;
+    color: #fff;
+    padding: 4px 0;
+}
+.secontent .justify-content-start{
+    margin-left: 6em;
+}
+
+::-webkit-scrollbar {
+    display: none;
+    width: 14px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+}
+::-webkit-scrollbar-thumb {
+    background: #f6aa1c; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #a78546; 
+}
+
+#home ul li{
+    display: inline;
+}
+#home ul li a{
+    background-color: #f6aa1c;
+    padding: 1px 3px;
+    font-size: 1.2em;
+    margin: 0 8px;
+    color: white;
+    text-decoration: none;
+}
+
+.secontent .flex-row{
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+.secontent .row{
+    margin-bottom: 4em;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 990px) {
+    #home{
+        text-align: center;
+    }
+    #home h1{
+        font-size: 5em;
+    }
+    #home .slogan{
+        font-size: 2em;
+    }
+    .secontent h1{
+        font-size: 5em;
+    }
+    .secontent .lengkap{
+        font-size: 3em;
+    }
+    #community .lengkap{
+        font-size: 4em;
+    }
+    #community .version,
+    #community #copied{
+        font-size: 2em;
+    }
+    #community .img-white{
+        width: 40%;
+    } 
+    .secontent .flex-row{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    #talisman::before,
+    #reforges::before{
+        background-position: right;
+    }
+}

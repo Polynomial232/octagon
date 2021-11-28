@@ -4,14 +4,47 @@
         <link rel="icon" href="./image/logo.ico">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/Font-Icon.css">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;400;500;900&family=Montserrat+Alternates:wght@100&display=swap" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <style>
             #reforges::before{
                 background-attachment: fixed;
+            }
+            #reforges{
+                padding: 4em 0;
+            }
+            .secontent{
+                height: auto;
+                color: black;
+            }
+            html{
+                scroll-snap-type: none;
+            }
+            .content tbody tr{
+                vertical-align: middle;
+            }
+            .pointer{
+                cursor: pointer;
+            }
+            .container-lg{
+                border-radius: 5px;
+                background-color: #e3e7e5;
+                padding: 3em;
+            }
+            .table-bordered{
+                border: black 2px solid;
+            }
+            @media only screen and (max-width: 990px) {
+                .container-lg{
+                    border-radius: 0;
+                    width: 100%;
+                    padding: 0;
+                }
             }
         </style>
     </head>
@@ -19,12 +52,388 @@
 
 
         <section class="secontent" id="reforges">
-            <div class="container">
-                aaa
+            <div class="container-lg">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Forge</h1>
+                        <hr>
+                    </div>
+                    <div class="col-lg-8">
+                        <p>
+                            Forge adalah mekanik tambahan yang dapat player gunakan untuk menambah status pada
+                            Weapon, Tools dan Armor. Tiap item hanya bisa mendapatkan 1 status Forge namun dapat diganti.
+                            Forge juga memiliki tingkatan untuk peningkatan status lebih baik
+                        </p>
+                        <h5>Effect List:</h5>
+                        <table class="table table-bordered">
+                            <tbody class="text-center">
+                                <tr>
+                                    <th><i class="fa fa-aspd fa-lg"></i> Attack Speed</th>
+                                    <th><i class="fa fa-crit fa-lg"></i> Crit Damage</th>
+                                    <th><i class="fa fa-def fa-lg"></i> Damage Reduction</th>
+                                    <th><i class="fa fa-dmg fa-lg"></i> Additional Damage</th>
+                                </tr>
+                                <tr>
+                                    <th><i class="fa fa-dura fa-lg"></i> Durability</th>
+                                    <th><i class="fa fa-knockback fa-lg"></i> Knockback</th>
+                                    <th><i class="fa fa-reward fa-lg"></i> Reward</th>
+                                    <th><i class="fa fa-move fa-lg"></i> Movement Speed</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="4"><i class="fa fa-dodge fa-lg"></i> Dodge</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h5>Condition List:</h5>
+                        <table class="table table-bordered">
+                            <tbody class="text-center">
+                                <tr>
+                                    <th><i class="fa fa-chance fa-lg"></i> Chance</th>
+                                    <th><i class="fa fa-healtd fa-lg"></i> At Healtd</th>
+                                    <th><i class="fa fa-hunger fa-lg"></i> At Hunger</th>
+                                    <th><i class="fa fa-water fa-lg"></i> In Water</th>
+                                    <th><i class="fa fa-sneak fa-lg"></i> Sneak</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-lg-4 d-none d-lg-block">
+                        <img src="./image/blacksmith.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col-lg-10 content" style="margin-top: 5em">
+                        <table class="table table-bordered" id="myTable">
+                            <thead class="text-center">
+                              <tr class="pointer table-active">
+                                <th scope="col" widtd=10% onclick="sortTable(0)">Name <i class="float-end fa fa-sort"></i></th>
+                                <th scope="col" widtd=15% onclick="sortTable(1)">Tools <i class="float-end fa fa-sort"></i></th>
+                                <th scope="col" widtd=15%>I</th>
+                                <th scope="col" widtd=15%>II</th>
+                                <th scope="col" widtd=15%>III</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Dwarfen</td>
+                                <td>Pickaxe</td>
+                                <td>
+                                    5% <i class="fa fa-chance fa-lg"></i> 8 <i class="fa fa-lg fa-reward"></i> </td>
+                                <td>
+                                    5% <i class="fa fa-chance fa-lg"></i> 12 <i class="fa fa-lg fa-reward"></i> </td>
+                                <td>
+                                    5% <i class="fa fa-chance fa-lg"></i> 15 <i class="fa fa-lg fa-reward"></i> </td>
+                              </tr>
+                              <tr>
+                                  <td>Relentless Voices</td>
+                                  <td>Armor</td>
+                                  <td>
+                                      -7% <i class="fa fa-def fa-lg"></i><br>
+                                      +10% <i class="fa fa-move fa-lg"></i></td>
+                                  <td>
+                                      -7% <i class="fa fa-def fa-lg"></i><br>
+                                      +13% <i class="fa fa-move fa-lg"></i></td>
+                                  <td>
+                                      -7% <i class="fa fa-def fa-lg"></i><br>
+                                      +15% <i class="fa fa-move fa-lg"></i></td>
+                              </tr>
+                              <tr>
+                                  <td>Relentless Eschew</td>
+                                  <td>Armor</td>
+                                  <td>
+                                      -7% <i class="fa fa-def fa-lg"></i><br>
+                                      6% <i class="fa fa-chance fa-lg"> <i class="fa fa-dodge fa-lg"></i></td>
+                                  <td>
+                                      -7% <i class="fa fa-def fa-lg"></i><br>
+                                      8% <i class="fa fa-chance fa-lg"> <i class="fa fa-dodge fa-lg"></i></td>
+                                  <td>
+                                      -7% <i class="fa fa-def fa-lg"></i><br>
+                                      10% <i class="fa fa-chance fa-lg"> <i class="fa fa-dodge fa-lg"></i></td>
+                              </tr>
+                              <tr>
+                                  <td>Precise</td>
+                                  <td>Bow</td>
+                                  <td>+10% <i class="fa fa-dmg fa-lg"></i> <i class="fa fa-sneak fa-lg"></i></td>
+                                  <td>+20% <i class="fa fa-dmg fa-lg"></i> <i class="fa fa-sneak fa-lg"></i></td>
+                                  <td>+30% <i class="fa fa-dmg fa-lg"></i> <i class="fa fa-sneak fa-lg"></i></td>
+                              </tr>
+                              <tr>
+                                  <td>Durable</td>
+                                  <td>All</td>
+                                  <td>+10% <i class="fa fa-dura fa-lg"></i></td>
+                                  <td>+20% <i class="fa fa-dura fa-lg"></i></td>
+                                  <td>+30% <i class="fa fa-dura fa-lg"></i></td>
+                              </tr>
+                              <tr>
+                                  <td>Accuracy</td>
+                                  <td>Melee</td>
+                                  <td>
+                                      +5% <i class="fa fa-dmg fa-lg"></i><br>
+                                      +10% <i class="fa fa-crit fa-lg"></i>
+                                    </td>
+                                  <td>
+                                      +6% <i class="fa fa-dmg fa-lg"></i><br>
+                                      +15% <i class="fa fa-crit fa-lg"></i></td>
+                                  <td>
+                                      +7% <i class="fa fa-dmg fa-lg"></i><br>
+                                      +20% <i class="fa fa-crit fa-lg"></i></td>
+                              </tr>
+                              <tr>
+                                  <td>Critical</td>
+                                  <td>Melee</td>
+                                  <td>+10% <i class="fa fa-crit fa-lg"></i></td>
+                                  <td>+20% <i class="fa fa-crit fa-lg"></i></td>
+                                  <td>+30% <i class="fa fa-crit fa-lg"></i></td>
+                              </tr>
+                              <tr>
+                                  <td>Fleeting</td>
+                                  <td>Melee</td>
+                                  <td>
+                                      -8% <i class="fa fa-dmg fa-lg"></i><br>
+                                      -5% <i class="fa fa-knockback fa-lg"></i><br>
+                                      +15% <i class="fa fa-aspd fa-lg"></i></td>
+                                  <td>
+                                      -11% <i class="fa fa-dmg fa-lg"></i><br>
+                                      -6% <i class="fa fa-knockback fa-lg"></i><br> 
+                                      +30% <i class="fa fa-aspd fa-lg"></i></td>
+                                  <td>
+                                      -14% <i class="fa fa-dmg fa-lg"></i><br>
+                                      -7% <i class="fa fa-knockback fa-lg"></i><br>
+                                      +45% <i class="fa fa-aspd fa-lg"></i></td>
+                              </tr>
+                              <tr>
+                                  <td>Aqua</td>
+                                  <td>All Weapon</td>
+                                  <td>+20% <i class="fa fa-dmg fa-lg"></i> <i class="fa fa-water fa-lg"></i></td>
+                                  <td>+40% <i class="fa fa-dmg fa-lg"></i> <i class="fa fa-water fa-lg"></i></td>
+                                  <td>+50% <i class="fa fa-dmg fa-lg"></i> <i class="fa fa-water fa-lg"></i></td>
+                              </tr>
+                              <tr>
+                                  <td>Sharp</td>
+                                  <td>Melee</td>
+                                  <td>
+                                      -65% <i class="fa fa-dura fa-lg"></i><br>
+                                      +30% <i class="fa fa-dmg fa-lg"></i></td>
+                                  <td>
+                                      -75% <i class="fa fa-dura fa-lg"></i><br>
+                                      +35% <i class="fa fa-dmg fa-lg"></i></td>
+                                  <td>
+                                      -85% <i class="fa fa-dura fa-lg"></i><br>
+                                      +40% <i class="fa fa-dmg fa-lg"></i></td>
+                              </tr>
+                              <tr>
+                                  <td>Prospect</td>
+                                  <td>Pickaxe</td>
+                                  <td>5% <i class="fa fa-chance fa-lg"></i> 5 <i class="fa fa-reward fa-lg"></i></td>
+                                  <td>10% <i class="fa fa-chance fa-lg"></i> 5 <i class="fa fa-reward fa-lg"></i></td>
+                                  <td>15% <i class="fa fa-chance fa-lg"></i> 5 <i class="fa fa-reward fa-lg"></i></td>
+                              </tr>
+                              <tr>
+                                  <td>Gluttony</td>
+                                  <td>Armor</td>
+                                  <td>
+                                      100% <i class="fa fa-hunger fa-lg"></i> <br>
+                                      +8% <i class="fa fa-move fa-lg"></i> </td>
+                                  <td>
+                                      100% <i class="fa fa-hunger fa-lg"></i><br>
+                                      +11% <i class="fa fa-move fa-lg"></i></td>
+                                  <td>
+                                      100% <i class="fa fa-hunger fa-lg"></i><br>
+                                      +14% <i class="fa fa-move fa-lg"></i></td>
+                              </tr>
+                              <tr>
+                                  <td>Greed</td>
+                                  <td>All Weapon</td>
+                                  <td>
+                                      100% <i class="fa fa-hunger fa-lg"></i><br>
+                                      +8% <i class="fa fa-move fa-lg"></i><br>
+                                      +15% <i class="fa fa-dmg fa-lg"></i></td>
+                                  <td>
+                                      100% <i class="fa fa-hunger fa-lg"></i><br>
+                                      +8% <i class="fa fa-move fa-lg"></i><br>
+                                      +18% <i class="fa fa-dmg fa-lg"></i></td>
+                                  <td>
+                                      100% <i class="fa fa-hunger fa-lg"></i><br>
+                                      +8% <i class="fa fa-move fa-lg"></i><br>
+                                      +21% <i class="fa fa-dmg fa-lg"></i></td>
+                              </tr>
+                              <tr>
+                                  <td>Pointy</td>
+                                  <td>Melee</td>
+                                  <td>+3% <i class="fa fa-dmg fa-lg"></i></td>
+                                  <td>+5% <i class="fa fa-dmg fa-lg"></i></td>
+                                  <td>+7% <i class="fa fa-dmg fa-lg"></i></td>
+                              </tr>
+                              <tr>
+                                  <td>Focus</td>
+                                  <td>Bow</td>
+                                  <td>+4% <i class="fa fa-dmg fa-lg"></i></td>
+                                  <td>+8% <i class="fa fa-dmg fa-lg"></i></td>
+                                  <td>+12% <i class="fa fa-dmg fa-lg"></i></td>
+                              </tr>
+                              <tr>
+                                  <td>Repel</td>
+                                  <td>Mele</td>
+                                  <td>
+                                      +2% <i class="fa fa-dmg fa-lg"></i><br>
+                                      +20% <i class="fa fa-knockback fa-lg"></i></td>
+                                  <td>
+                                      +3% <i class="fa fa-dmg fa-lg"></i><br>
+                                      +30% <i class="fa fa-knockback fa-lg"></i></td>
+                                  <td>
+                                      +4% <i class="fa fa-dmg fa-lg"></i><br>
+                                      +40% <i class="fa fa-knockback fa-lg"></i></td>
+                              </tr>
+                              <tr>
+                                  <td>Lightweight</td>
+                                  <td>Armor</td>
+                                  <td>
+                                      -6% <i class="fa fa-def fa-lg"></i><br>
+                                      +4% <i class="fa fa-dodge fa-lg"></i><br>
+                                      +2% <i class="fa fa-move fa-lg"></i></td>
+                                  <td>
+                                      -6% <i class="fa fa-def fa-lg"></i><br>
+                                      +8% <i class="fa fa-dodge fa-lg"></i><br>
+                                      +2% <i class="fa fa-move fa-lg"></i></td>
+                                  <td>
+                                      -6% <i class="fa fa-def fa-lg"></i><br>
+                                      +12% <i class="fa fa-dodge fa-lg"></i><br>
+                                      +2% <i class="fa fa-move fa-lg"></i></td>
+                              </tr>
+                              <tr>
+                                  <td>Featder</td>
+                                  <td>Armor</td>
+                                  <td>
+                                      -5% <i class="fa fa-def fa-lg"></i><br>
+                                      +7% <i class="fa fa-move fa-lg"></i></td>
+                                  <td>
+                                      -5% <i class="fa fa-def fa-lg"></i><br>
+                                      +9% <i class="fa fa-move fa-lg"></i></td>
+                                  <td>
+                                      -5% <i class="fa fa-def fa-lg"></i><br>
+                                      +11% <i class="fa fa-move fa-lg"></i></td>
+                              </tr>
+                              <tr>
+                                  <td>Tough</td>
+                                  <td>Armor</td>
+                                  <td>+4% <i class="fa fa-def fa-lg"></i></td>
+                                  <td>+7% <i class="fa fa-def fa-lg"></i></td>
+                                  <td>+10% <i class="fa fa-def fa-lg"></i></td>
+                              </tr>
+                              <tr>
+                                  <td>Thick</td>
+                                  <td>Armor</td>
+                                  <td>+7% <i class="fa fa-def fa-lg"></i></td>
+                                  <td>+14% <i class="fa fa-def fa-lg"></i></td>
+                                  <td>+21% <i class="fa fa-def fa-lg"></i></td>
+                              </tr>
+                              <tr>
+                                <td>Inherited Copper</td>
+                                <td>All Weapon</td>
+                                <td>
+                                    11% <i class="fa fa-chance fa-lg"></i><br>
+                                    +50% <i class="fa fa-dmg fa-lg"></i></td>
+                                <td>
+                                    22% <i class="fa fa-chance fa-lg"></i><br>
+                                    +50% <i class="fa fa-dmg fa-lg"></i></td>
+                                <td>
+                                    33% <i class="fa fa-chance fa-lg"></i><br>
+                                    +50% <i class="fa fa-dmg fa-lg"></i></td>
+                              </tr>
+                              <tr>
+                                  <td>Inherited Iron</td>
+                                  <td>All Weapon</td>
+                                  <td>
+                                      11% <i class="fa fa-chance fa-lg"></i><br>
+                                      +75% <i class="fa fa-dmg fa-lg"></i></td>
+                                  <td>
+                                      22% <i class="fa fa-chance fa-lg"></i><br>
+                                      +75% <i class="fa fa-dmg fa-lg"></i></td>
+                                  <td>
+                                      33% <i class="fa fa-chance fa-lg"></i><br>
+                                      +75% <i class="fa fa-dmg fa-lg"></i></td>
+                              </tr>
+                              <tr>
+                                <td>Inherited Gemstone</td>
+                                <td>All Weapon</td>
+                                <td>
+                                    11% <i class="fa fa-chance fa-lg"></i><br>
+                                    +100% <i class="fa fa-dmg fa-lg"></i></td>
+                                <td>
+                                    22% <i class="fa fa-chance fa-lg"></i><br>
+                                    +100% <i class="fa fa-dmg fa-lg"></i></td>
+                                <td>
+                                    33% <i class="fa fa-chance fa-lg"></i><br>
+                                    +100% <i class="fa fa-dmg fa-lg"></i></td>
+                              </tr>
+                              <tr>
+                                  <td>Legionnaires</td>
+                                  <td>All Weapon</td>
+                                  <td>+45% <i class="fa fa-crit fa-lg"></i></td>
+                                  <td>+55% <i class="fa fa-crit fa-lg"></i></td>
+                                  <td>+65% <i class="fa fa-crit fa-lg"></i></td>
+                              </tr>
+                              <tr>
+                                  <td>Justifier</td>
+                                  <td>Melee</td>
+                                  <td>+25% <i class="fa fa-aspd fa-lg"></i></td>
+                                  <td>+30% <i class="fa fa-aspd fa-lg"></i></td>
+                                  <td>+35% <i class="fa fa-aspd fa-lg"></i></td>
+                              </tr>
+                              <tr>
+                                  <td>Flimsy Warblade</td>
+                                  <td>All Weapon</td>
+                                  <td>+10% <i class="fa fa-move fa-lg"></i></td>
+                                  <td>+13% <i class="fa fa-move fa-lg"></i></td>
+                                  <td>+16% <i class="fa fa-move fa-lg"></i></td>
+                              </tr>
+                              <tr>
+                                  <td>Energy Warblade</td>
+                                  <td>All Weapon</td>
+                                  <td>
+                                      100% <i class="fa fa-hunger fa-lg"></i><br>
+                                      11% <i class="fa fa-move fa-lg"></i></td>
+                                  <td>
+                                      100% <i class="fa fa-hunger fa-lg"></i><br>
+                                      15% <i class="fa fa-move fa-lg"></i></td>
+                                  <td>
+                                      100% <i class="fa fa-hunger fa-lg"></i><br>
+                                      19% <i class="fa fa-move fa-lg"></i></td>
+                              </tr>
+                              <tr>
+                                  <td>Feral Skeletal</td>
+                                  <td>Melee</td>
+                                  <td>
+                                      +40% <i class="fa fa-dmg fa-lg"></i><br>
+                                      -45% <i class="fa fa-aspd fa-lg"></i></td>
+                                  <td>
+                                      +50% <i class="fa fa-dmg fa-lg"></i><br>
+                                      -45% <i class="fa fa-aspd fa-lg"></i></td>
+                                  <td>
+                                      +60% <i class="fa fa-dmg fa-lg"></i><br>
+                                      -45% <i class="fa fa-aspd fa-lg"></i></td>
+                              </tr>
+                              <tr>
+                                  <td>Tangible Skeletal</td>
+                                  <td>Melee</td>
+                                  <td>
+                                    +60% <i class="fa fa-dmg fa-lg"></i><br>
+                                    -60% <i class="fa fa-aspd fa-lg"></i></td>
+                                  <td>
+                                    +75% <i class="fa fa-dmg fa-lg"></i><br>
+                                    -60% <i class="fa fa-aspd fa-lg"></i></td>
+                                  <td>
+                                    +90% <i class="fa fa-dmg fa-lg"></i><br>
+                                    -60% <i class="fa fa-aspd fa-lg"></i></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
             </div>
         </section>
 
-        <section class="secontent text-center" id="community">
+        <!-- section class="secontent text-center" id="community">
             <div class="row align-items-center justify-content-center w-100">
                 <div class="col-12">
                     <h1 style="margin-bottom: 0.7em;">slot terbatas<br><span class="fst-italic bottom-bold">tunggu apa lagi?</span></h1>
@@ -36,7 +445,7 @@
                     </a>
                 </div>
             </div>
-        </section>
+        </section -->
 
         <footer class="" style="background-color: rgba(0, 0, 0, 0.986); color: #ffffff;">
             <div class="container p-2 text-center text-uppercase">

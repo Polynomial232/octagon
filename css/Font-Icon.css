@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Icon';
+    src: url('./Font-Icon/Icon-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+.fa-dura:before {
+    font-family: Icon;
+    content: "a";
+    color: #009e2f;
+}
+.fa-health:before {
+    font-family: Icon;
+    content: "b";
+    color: #e30a17;
+}
+.fa-hunger:before {
+    font-family: Icon;
+    content: "c";
+    color: #ffa100;
+}
+.fa-dmg:before {
+    font-family: Icon;
+    content: "d";
+    color: #e62937;
+}
+.fa-water:before {
+    color: #00a9ff;
+}
+.fa-knockback:before {
+    font-family: Icon;
+    content: "f";
+    color: #c87aff;
+}
+.fa-aspd:before {
+    font-family: Icon;
+    content: "g";
+    color: #fdf900;
+}
+.fa-chance:before {
+    font-family: Icon;
+    content: "h";
+    color: #701f85;
+}
+.fa-sneak:before {
+    font-family: Icon;
+    content: "i";
+    color: #873cbe;
+}
+.fa-reward:before {
+    font-family: Icon;
+    content: "j";
+    color: #00752c;
+}
+.fa-def:before {
+    font-family: Icon;
+    content: "k";
+    color: #0079f1;
+}
+.fa-crit:before {
+    font-family: Icon;
+    content: "l";
+    color: #ff7525;
+}
+.fa-move:before {
+    font-family: Icon;
+    content: "m";
+    color: #ffa100;
+}
+.fa-dodge:before {
+    font-family: Icon;
+    content: "n";
+    color: #701f85;
+}

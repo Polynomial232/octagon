@@ -1,12 +1,12 @@
 # Table of contents
 
-* [RPG](README.md)
-  * [ARMOR](rpg/armor.md)
-
 ## 🎣 FISHING
 
-* [ABOUT FISHING](<README (1).md>)
-* [COMMON](fishing/common.md)
-* [RARE](fishing/rare.md)
-* [EPIC](fishing/epic.md)
-* [LEGENDARY](fishing/legendary.md)
+* [FISHING](README.md)
+  * [COMMON](fishing/readme/common.md)
+  * [RARE](fishing/readme/rare.md)
+  * [EPIC](fishing/readme/epic.md)
+  * [LEGENDARY](fishing/readme/legendary.md)
+* [RPG](fishing/rpg/README.md)
+  * [ARMOR](fishing/rpg/armor.md)
+  * [SWORD](fishing/rpg/sword.md)

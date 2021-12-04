@@ -1,7 +1,2 @@
----
-description: RPG Items Stats & Information
----
+# ABOUT FISHING
 
-# RPG
-
-Armor

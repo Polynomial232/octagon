@@ -1,4 +1,9 @@
 # Table of contents
 
-* [🐟 FISHING](README.md)
-* [Page 2](page-2.md)
+## 🎣 FISHING
+
+* [ABOUT FISHING](README.md)
+* [COMMON](fishing/common.md)
+* [RARE](fishing/rare.md)
+* [EPIC](fishing/epic.md)
+* [LEGENDARY](fishing/legendary.md)

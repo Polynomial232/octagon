@@ -1,6 +1,6 @@
 # Table of contents
 
-* [FISHING](README.md)
+* [🐋 FISHING](README.md)
   * [COMMON](fishing/readme/common.md)
   * [RARE](fishing/readme/rare.md)
   * [EPIC](fishing/readme/epic.md)
@@ -8,9 +8,9 @@
 * [⚔ RPG](fishing/rpg/README.md)
   * [ARMOR](fishing/rpg/armor.md)
   * [SWORD](fishing/rpg/sword.md)
-* [🛠 FORGE](forge/README.md)
-  * [ARMOR](forge/armor.md)
-  * [MELEE](forge/melee.md)
-  * [BOW](forge/bow.md)
-  * [TRIDENT](forge/trident.md)
-  * [PICKAXE](forge/pickaxe.md)
+* [🛠 FORGE](reforges/README.md)
+  * [ARMOR](reforges/armor.md)
+  * [MELEE](reforges/melee.md)
+  * [BOW](reforges/bow.md)
+  * [TRIDENT](reforges/trident.md)
+  * [PICKAXE](reforges/pickaxe.md)

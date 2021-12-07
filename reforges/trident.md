@@ -1,0 +1,10 @@
+# TRIDENT
+
+| Name               |                                        I                                       |                                       II                                       |                                       III                                      |
+| ------------------ | :----------------------------------------------------------------------------: | :----------------------------------------------------------------------------: | :----------------------------------------------------------------------------: |
+| Inherited Copper   |   11% ![](../.gitbook/assets/CHANCE.png) +50%![](../.gitbook/assets/DMG.png)   |   22% ![](../.gitbook/assets/CHANCE.png) +50%![](../.gitbook/assets/DMG.png)   |   33% ![](../.gitbook/assets/CHANCE.png) +50%![](../.gitbook/assets/DMG.png)   |
+| Inherited Iron     |   11% ![](../.gitbook/assets/CHANCE.png) +75%![](../.gitbook/assets/DMG.png)   |   22% ![](../.gitbook/assets/CHANCE.png) +75%![](../.gitbook/assets/DMG.png)   |   33% ![](../.gitbook/assets/CHANCE.png) +75%![](../.gitbook/assets/DMG.png)   |
+| Inherited Gemstone |   11% ![](../.gitbook/assets/CHANCE.png) +100%![](../.gitbook/assets/DMG.png)  |   22% ![](../.gitbook/assets/CHANCE.png) +100%![](../.gitbook/assets/DMG.png)  |   33% ![](../.gitbook/assets/CHANCE.png) +100%![](../.gitbook/assets/DMG.png)  |
+| Legionnaires       |                      +12% ![](../.gitbook/assets/CRIT.png)                     |                      +17% ![](../.gitbook/assets/CRIT.png)                     |                      +22% ![](../.gitbook/assets/CRIT.png)                     |
+| Flimsy Warblade    |                     +10% ![](../.gitbook/assets/SPEED.png)                     |                     +13% ![](../.gitbook/assets/SPEED.png)                     |                     +16% ![](../.gitbook/assets/SPEED.png)                     |
+| Energy Warblade    | +11% ![](../.gitbook/assets/SPEED.png) 100% ![](../.gitbook/assets/HUNGER.png) | +15% ![](../.gitbook/assets/SPEED.png) 100% ![](../.gitbook/assets/HUNGER.png) | +19% ![](../.gitbook/assets/SPEED.png) 100% ![](../.gitbook/assets/HUNGER.png) |

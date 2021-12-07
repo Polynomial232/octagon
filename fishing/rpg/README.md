@@ -2,6 +2,6 @@
 description: RPG Items Stats & Information
 ---
 
-# RPG
+# ⚔ RPG
 
 Armor

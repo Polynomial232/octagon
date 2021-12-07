@@ -19,3 +19,15 @@
 ### Condition
 
 ![Sneak](../.gitbook/assets/SNEAK.png) ![Chance](../.gitbook/assets/CHANCE.png) ![Health](../.gitbook/assets/HEALTH.png) ![Hunger](../.gitbook/assets/HUNGER.png) ![In Water](../.gitbook/assets/IN\_WATER.png)
+
+#### Keterangan:
+
+* Sneak: : efek aktif ketika karakter jongkok
+* Chance: kesempatan untuk mengaktifkan efek
+* Health: efek aktif ketika tingkat darah sesuai ketentuan
+* Hunger: efek aktif ketika tingkat kelaparan sesuai ketentuan
+* In Water: efek aktif ketika karakter berada diair
+
+> #### Latest Update:
+>
+> 7 / 12 / 2021 : Penambahan Dokumentasi Reforges

@@ -1,4 +1,12 @@
-# 🛠 REFORGES
+# 🛠 FORGE
+
+Forge adalah mekanik tambahan yang dapat player gunakan untuk menambah status pada Weapon, Tools dan Armor. Tiap item hanya bisa mendapatkan 1 status Forge namun dapat diganti. Forge juga memiliki tingkatan untuk peningkatan status lebih baik.
+
+
+
+Pergilah ke NPC Blacksmith di Spawn untuk melakukan Forge. Forge dapat dilakukan dengan 2 cara yaitu dengan batu forge atau tanpa batu.
+
+biaya yang untuk pertama kali forge pada alat adalah ₵ 7500, dan setelahnya biaya akan berkelipatan konstan
 
 ### Effect List:
 
@@ -30,4 +38,4 @@
 
 > #### Latest Update:
 >
-> 7 / 12 / 2021 : Penambahan Dokumentasi Reforges
+> 7 / 12 / 2021 : Penambahan Dokumentasi Forge

@@ -11,6 +11,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;400;500;900&family=Montserrat+Alternates:wght@100&display=swap" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     </head>
     <body>
         <section class="nav position-fixed top-50 start-0 translate-middle-y d-none">
@@ -43,7 +44,7 @@
 
         <section class="secontent" id="dungeon">
             <div class="row flex-row w-100">
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1200">
                     <h1 class="mb-4">Aksi tak terbatas<br><span class="fst-italic bottom-bold">Dungeon</span>.</h1>
                     <!--a href=""><span class="lengkap">lihat selengkapnya</span></a-->
                 </div>
@@ -52,7 +53,7 @@
 
         <section class="secontent" id="talisman">
             <div class="row flex-row w-100">
-                <div class="col-lg-5">
+                <div class="col-lg-5"  data-aos="fade-right" data-aos-duration="1200">
                     <h1 class="mb-4">Perkuat diri<br><span class="fst-italic bottom-bold">Talisman</span>.</h1>
                     <!--a href=""><span class="lengkap">lihat selengkapnya</span></a-->
                 </div>
@@ -61,7 +62,7 @@
 
         <section class="secontent" id="rpg">
             <div class="row flex-row w-100">
-                <div class="col-lg-5">
+                <div class="col-lg-5"  data-aos="fade-right" data-aos-duration="1200">
                     <h1 class="mb-4">unique<br><span class="fst-italic bottom-bold">RPG</span>.</h1>
                     <!--a href=""><span class="lengkap">lihat selengkapnya</span></a-->
                 </div>
@@ -70,7 +71,7 @@
 
         <section class="secontent" id="reforges">
             <div class="row flex-row w-100">
-                <div class="col-lg-5">
+                <div class="col-lg-5"  data-aos="fade-right" data-aos-duration="1200">
                     <h1 class="mb-4">Peralatan<br><span class="fst-italic bottom-bold">Forge</span>.</h1>
                     <!--a href=""><span class="lengkap">lihat selengkapnya</span></a-->
                 </div>
@@ -79,7 +80,7 @@
 
         <section class="secontent" id="slimefun">
             <div class="row flex-row w-100">
-                <div class="col-lg-5">
+                <div class="col-lg-5"  data-aos="fade-right" data-aos-duration="1200">
                     <h1 class="mb-4">Machine<br><span class="fst-italic bottom-bold">Slimefun</span>.</h1>
                     <!--a href=""><span class="lengkap">lihat selengkapnya</span></a-->
                 </div>
@@ -88,7 +89,7 @@
 
         <section class="secontent" id="fishing">
             <div class="row flex-row w-100">
-                <div class="col-lg-5">
+                <div class="col-lg-5"  data-aos="fade-right" data-aos-duration="1200">
                     <h1 class="mb-4">relaxed<br><span class="fst-italic bottom-bold">More Fish</span>.</h1>
                     <!--a href=""><span class="lengkap">lihat selengkapnya</span></a-->
                 </div>
@@ -97,7 +98,7 @@
 
         <section class="secontent text-center" id="community">
             <div class="row align-items-center justify-content-center w-100">
-                <div class="col-12">
+                <div class="col-12" >
                     <h1 style="margin-bottom: 0.7em;">slot terbatas<br><span class="fst-italic bottom-bold">tunggu apa lagi?</span></h1>
                     <span id="copied">&nbsp;</span>
                     <button onclick="copyToClipboard('#ip')" class="lengkap" title="copy ip">ip: <span id="ip">play.octagon-id.xyz</span></button>
@@ -118,5 +119,9 @@
         </footer>
 
         <script src="./js/script.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </body>
 </html>

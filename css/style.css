@@ -8,7 +8,6 @@
 }
 html{
     overflow-y: scroll;
-    scroll-snap-type: y mandatory;
 }
 .secontent{
     position: relative;

@@ -8,33 +8,13 @@ Pergilah ke NPC Blacksmith di Spawn untuk melakukan Forge. Forge dapat dilakukan
 
 biaya yang untuk pertama kali forge pada alat adalah ₵ 7500, dan setelahnya biaya akan berkelipatan konstan
 
-### Effect List:
+### Effect List & Description
 
-![Dodge](../.gitbook/assets/DODGE.png) ![Knockback](../.gitbook/assets/KB.png) ![Movement Speed](../.gitbook/assets/SPEED.png) ![Reward](../.gitbook/assets/REWARD.png) ![Attack Speed](../.gitbook/assets/ASPD.png) ![Crit Damage](../.gitbook/assets/CRIT.png) ![Durability](../.gitbook/assets/DURA.png) ![Damage Reduce](../.gitbook/assets/DEF.png) ![Damage](../.gitbook/assets/DMG.png)
+<table><thead><tr><th data-type="files">Files</th><th>Nama</th><th>Keterangan</th></tr></thead><tbody><tr><td></td><td>Dodge</td><td>Kamu menghindar dan tidak menerima damage sama sekali</td></tr><tr><td></td><td>Knockback</td><td>Membuat musuhmu mundur</td></tr><tr><td></td><td>Movement Speed</td><td>Kecepatan pergerakan dari karakter</td></tr><tr><td></td><td>Reward</td><td>Hadiah yang didapatkan berupa balance</td></tr><tr><td></td><td>Attack Speed</td><td>Kecepatan serangan dari karakter</td></tr><tr><td></td><td>Critical Damage</td><td>Serangan fatal yang diberikan</td></tr><tr><td></td><td>Durability</td><td>Daya tahan dari suatu alat</td></tr><tr><td></td><td>Damage Reduce</td><td>Serangan yang diterima oleh karakter</td></tr><tr><td></td><td>Damage</td><td>Serangan yang diberikan</td></tr></tbody></table>
 
-#### Keterangan:
+### Condition & Description
 
-* Dodge: kamu menghindar dan tidak menerima damage sama sekali
-* Knockback: membuat musuhmu mundur
-* Movement Speed: kecepatan pergerakan dari  karakter
-* Reward: hadiah yang didapatkan berupa balance
-* Attack Speed: kecepatan serangan dari karakter
-* Crit Damage: serangan fatal yang diberikan
-* Durability: daya tahan dari suatu alat
-* Damage Reduce: serangan yang diterima oleh karakter
-* Damage: serangan yang diberikan
-
-### Condition
-
-![Sneak](../.gitbook/assets/SNEAK.png) ![Chance](../.gitbook/assets/CHANCE.png) ![Health](../.gitbook/assets/HEALTH.png) ![Hunger](../.gitbook/assets/HUNGER.png) ![In Water](../.gitbook/assets/IN\_WATER.png)
-
-#### Keterangan:
-
-* Sneak: : efek aktif ketika karakter jongkok
-* Chance: kesempatan untuk mengaktifkan efek
-* Health: efek aktif ketika tingkat darah sesuai ketentuan
-* Hunger: efek aktif ketika tingkat kelaparan sesuai ketentuan
-* In Water: efek aktif ketika karakter berada diair
+<table><thead><tr><th data-type="files"></th><th>Nama</th><th>Keterangan</th></tr></thead><tbody><tr><td></td><td>Sneak</td><td>Efek aktif ketika karakter jongkok</td></tr><tr><td></td><td>Chance</td><td>Kesempatan untuk mengaktifkan efek</td></tr><tr><td></td><td>Health</td><td>Efek aktif ketika tingkat darah sesuai ketentuan</td></tr><tr><td></td><td>Hunger</td><td>Efek aktif ketika tingkat kelaparan sesuai ketentuan</td></tr><tr><td></td><td>In Water</td><td>Efek aktif ketika karakter berada diair</td></tr></tbody></table>
 
 > #### Latest Update:
 >
